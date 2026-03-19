@@ -292,11 +292,11 @@ function StrategyTab({ setSelectedImage }) {
             onClick={() => setSelectedImage("/La piramide radio.png")}
           />
           <FormulaCard 
-            imgUrl="/Mockup Ads La Piramide.jpg"
+            imgUrl="/Mockup Ads La Piramide.png"
             tag="Conversión"
             title="ADS (REDES)"
             desc="Campañas digitales estrictamente orientadas a captar leads, consultas y ventas directas."
-            onClick={() => setSelectedImage("/Mockup Ads La Piramide.jpg")}
+            onClick={() => setSelectedImage("/Mockup Ads La Piramide.png")}
           />
         </div>
       </div>
@@ -307,10 +307,10 @@ function StrategyTab({ setSelectedImage }) {
 function FormulaCard({ imgUrl, tag, title, desc, onClick }) {
   return (
     <div className="bg-white rounded-3xl p-4 border border-gray-100 shadow-sm group cursor-pointer" onClick={onClick}>
-      {/* Se aplican comillas dobles en el código de CSS para evitar que se rompa con los espacios del nombre del archivo */}
+      {/* Asegurando las comillas simples de forma estricta para la correcta visualización en Vercel */}
       <div 
         className="h-48 rounded-2xl bg-cover bg-center mb-6 relative overflow-hidden"
-        style={{ backgroundImage: `url("${imgUrl}")` }}
+        style={{ backgroundImage: `url('${imgUrl}')` }}
       >
         <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
       </div>
